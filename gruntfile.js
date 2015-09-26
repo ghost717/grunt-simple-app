@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
 
 	grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         // https://github.com/gruntjs/grunt-contrib-jshint
         jshint: {
             options: {
@@ -22,6 +23,20 @@ module.exports = function (grunt) {
                 'test/**/*.js'
             ]
         },
+        // https://github.com/gruntjs/grunt-contrib-less
+        less: {
+          development: {
+            options: {
+              compress: true,
+              yuicompress: true,
+              optimization: 2
+            },
+            files: {
+            //  "src/css/screen.css": "src/less/screen.less" // destination file and source file
+              "src/css/*.css": "src/less/*.less" // destination file and source file
+            }
+          }
+        },
         // https://github.com/gruntjs/grunt-contrib-watch
         watch: {
             all: {
@@ -37,6 +52,13 @@ module.exports = function (grunt) {
                 options: {
                     reload: true
                 }
+            },
+            styles: {
+                files: ['less/**/*.less'], // which files to watch
+                tasks: ['less'],
+                options: {
+                  nospawn: true
+                }
             }
         }
     });
@@ -44,7 +66,8 @@ module.exports = function (grunt) {
     // load tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
 	// register defaut task
-	grunt.registerTask('default', []);
+	 grunt.registerTask('default', ['less', 'watch']);
 };

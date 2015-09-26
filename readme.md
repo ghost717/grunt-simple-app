@@ -3,7 +3,8 @@ Sample ToDo App
 
 Start
 -----
-npm install
+> npm install
+> grunt
 
 Source
 -----
