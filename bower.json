@@ -1,0 +1,32 @@
+{
+  "name": "todo-sample-app",
+  "version": "0.0.0",
+  "authors": [
+    "Jakub Gutkowski <j.gutkowski@gmail.com>",
+    "Gustavo Javier Machado",
+    "Jérôme Gravel-Niquet"
+  ],
+  "description": "sample app for playing with automation",
+  "keywords": [
+    "sample"
+  ],
+  "license": "MIT",
+  "homepage": "http://blog.gutek.pl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "knockout": "~3.1.0",
+    "knockout-sortable": "~0.8.8",
+    "jquery-ui": "~1.10.4"
+  },
+  "devDependencies": {
+    "qunit": "~1.14.0"
+  }
+}

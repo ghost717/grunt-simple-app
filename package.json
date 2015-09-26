@@ -1,0 +1,16 @@
+{
+  "name": "GetResponse",
+  "version": "0.0.0",
+  "description": "sample app",
+  "keywords": [
+    "GetResponse"
+  ],
+  "author": "Dawid Zawadzki",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "jshint-stylish": "^2.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
